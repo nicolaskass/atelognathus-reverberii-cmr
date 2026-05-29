@@ -1,0 +1,186 @@
+{
+  "_meta": {
+    "n_sample": 25000,
+    "seed": 2024
+  },
+  "capture_freq_distribution": {
+    "Oct 2019": {
+      "n_detected": 68,
+      "K_total": 72,
+      "p_naive_mle": 0.2647058823529412,
+      "obs_counts_by_k": [
+        64,
+        4,
+        0,
+        0
+      ],
+      "expected_M0_counts_by_k": [
+        40.4457598568696,
+        21.84071032270957,
+        5.241770477450302,
+        0.4717593429705269
+      ],
+      "chi2_stat": 33.296341612200415,
+      "chi2_dof": 1,
+      "chi2_p_value": 7.913136368387086e-09
+    },
+    "Nov 2019": {
+      "n_detected": 144,
+      "K_total": 158,
+      "p_naive_mle": 0.21944444444444444,
+      "obs_counts_by_k": [
+        131,
+        12,
+        1,
+        0,
+        0
+      ],
+      "expected_M0_counts_by_k": [
+        82.57704676018336,
+        46.431222021740076,
+        13.053617579065719,
+        1.8349391258829035,
+        0.10317451312793553
+      ],
+      "chi2_stat": 64.15618731786743,
+      "chi2_dof": 1,
+      "chi2_p_value": 1.1102230246251565e-15
+    },
+    "Feb 2020": {
+      "n_detected": 87,
+      "K_total": 109,
+      "p_naive_mle": 0.25057471264367814,
+      "obs_counts_by_k": [
+        68,
+        16,
+        3,
+        0,
+        0
+      ],
+      "expected_M0_counts_by_k": [
+        45.02691251491951,
+        30.110021252308126,
+        10.06746109356314,
+        1.6830571460097894,
+        0.11254799319942768
+      ],
+      "chi2_stat": 22.77681412787318,
+      "chi2_dof": 1,
+      "chi2_p_value": 1.8194762885226368e-06
+    }
+  },
+  "posterior_predictive": {
+    "K_obs_per_session": [
+      72,
+      158,
+      109
+    ],
+    "K_obs_total": 339,
+    "K_sim_mean_per_session": [
+      72.572,
+      157.051,
+      107.953
+    ],
+    "K_sim_total_mean": 337.576,
+    "bayes_p_per_session": [
+      0.591,
+      0.416,
+      0.4305
+    ],
+    "bayes_p_total": 0.431,
+    "n_pp_draws": 2000,
+    "interpretation": "Bayes p-values close to 0.5 indicate adequate fit; values close to 0 or 1 indicate posterior predictions systematically disagree with the data. Conventional cutoff for concern: p < 0.05 or p > 0.95."
+  },
+  "shrinkage": {
+    "phi_01": 0.4023387359415084,
+    "phi_12": 0.9659655721230979,
+    "p_oct": 0.9003939543975032,
+    "p_nov": 0.9783905228607348,
+    "p_feb": 0.9783643167447894,
+    "interpretation": "Shrinkage = 1 - Var(posterior)/Var(prior) on logit scale. Values > 0.5 indicate data-dominated posterior; values < 0.3 indicate parameter is prior-dominated."
+  },
+  "waic_with_se": {
+    "waic": 162.27827000903878,
+    "se": 22.11226197026035,
+    "n_obs": 275,
+    "lppd": -79.45639631419834,
+    "p_waic": 1.6827386903210464
+  },
+  "alt_prior_comparison": {
+    "phi_01_alt": {
+      "median": 0.7439683579539602,
+      "ci_low": 0.42952610459097645,
+      "ci_high": 0.9833111331296104
+    },
+    "phi_12_alt": {
+      "median": 0.18152668139489514,
+      "ci_low": 0.09810407497556112,
+      "ci_high": 0.3172318756886625
+    },
+    "interpretation": "Comparison of posteriors under Normal(2,2) primary vs Logistic(0,1) uniform-on-probability prior. If φ_01 changes substantially while φ_12 does not, this confirms φ_01 is prior-driven."
+  },
+  "alt_prior_shrinkage": {
+    "phi_01": 0.621425797326038,
+    "phi_12": 0.9584419194383904,
+    "p_oct": 0.9004131421559842,
+    "p_nov": 0.9773636784245736,
+    "p_feb": 0.9787753499503102,
+    "interpretation": "Shrinkage = 1 - Var(posterior)/Var(prior) on logit scale. Values > 0.5 indicate data-dominated posterior; values < 0.3 indicate parameter is prior-dominated."
+  },
+  "N_feb_bias_simulation": {
+    "N_true_baseline": 201,
+    "p_feb_used": 0.10725303058766812,
+    "n_sim_per_epsilon": 200,
+    "curve": [
+      {
+        "epsilon": 0.0,
+        "N_hat_mean": 201.47917988217523,
+        "N_hat_sd": 16.042332890276807,
+        "N_hat_q025": 170.87328554639055,
+        "N_hat_q975": 233.29776059730239,
+        "n_sim_valid": 200
+      },
+      {
+        "epsilon": 0.05,
+        "N_hat_mean": 173.98007255632493,
+        "N_hat_sd": 15.974544757731337,
+        "N_hat_q025": 143.15473973284966,
+        "N_hat_q975": 207.94684057200146,
+        "n_sim_valid": 200
+      },
+      {
+        "epsilon": 0.1,
+        "N_hat_mean": 152.33650803358506,
+        "N_hat_sd": 15.967846600485318,
+        "N_hat_q025": 120.11369852534379,
+        "N_hat_q975": 180.22829475846058,
+        "n_sim_valid": 200
+      },
+      {
+        "epsilon": 0.2,
+        "N_hat_mean": 115.20520603752928,
+        "N_hat_sd": 13.309267386435295,
+        "N_hat_q025": 90.02752692356296,
+        "N_hat_q975": 145.5223655210896,
+        "n_sim_valid": 200
+      },
+      {
+        "epsilon": 0.4,
+        "N_hat_mean": 60.69206593756555,
+        "N_hat_sd": 9.99122722933138,
+        "N_hat_q025": 41.57781872031131,
+        "N_hat_q975": 78.59362677547738,
+        "n_sim_valid": 200
+      },
+      {
+        "epsilon": 0.6,
+        "N_hat_mean": 31.633790409703526,
+        "N_hat_sd": 8.411884457078228,
+        "N_hat_q025": 16.169151724565513,
+        "N_hat_q975": 50.81733399149161,
+        "n_sim_valid": 200
+      }
+    ],
+    "interpretation": "If frogs exit the detectable area within the session at rate ε, the naive Horvitz-Thompson estimator under-estimates the true session-resident N. The curve quantifies this bias: at ε=0.4, for instance, the estimator typically returns ~X% of the truth."
+  }
+}

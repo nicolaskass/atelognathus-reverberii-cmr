@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+.env
+.ipynb_checkpoints/
+.DS_Store
+
+# Posterior sample caches (regenerable; large files)
+outputs/posterior_samples_*.npz

@@ -1,0 +1,228 @@
+{
+  "_meta": {
+    "generated_at": "2026-05-16T00:42:53+00:00",
+    "source_csv": "outputs/cmr/cmr_posterior_summary.csv",
+    "source_data": "data/capture_history.csv",
+    "schema_version": 1
+  },
+  "design": {
+    "n_individuals": 275,
+    "n_primary_sessions": 3,
+    "n_secondary_occasions": [
+      4,
+      5,
+      5
+    ],
+    "n_total_occasions": 14,
+    "sessions": [
+      "Oct 2019",
+      "Nov 2019",
+      "Feb 2020"
+    ],
+    "n_per_session": [
+      68,
+      144,
+      87
+    ],
+    "n_captures_per_session": [
+      72,
+      158,
+      109
+    ],
+    "n_total_capture_events": 339,
+    "n_within_session_recaptures": 40,
+    "n_multi_session_individuals": 24,
+    "n_oct_nov_both_sessions": 10,
+    "within_session_recap_rate": [
+      0.059,
+      0.097,
+      0.253
+    ],
+    "naive_per_occasion_p": [
+      0.265,
+      0.219,
+      0.251
+    ],
+    "history_patterns": {
+      "1,0,0": 54,
+      "1,1,0": 10,
+      "1,0,1": 4,
+      "0,1,0": 124,
+      "0,1,1": 10,
+      "0,0,1": 73
+    }
+  },
+  "mcmc": {
+    "n_chains": 4,
+    "n_warmup": 3000,
+    "n_sample": 25000,
+    "seed": 2024
+  },
+  "posteriors": {
+    "phi_01": {
+      "mean": 0.8488,
+      "sd": 0.1377,
+      "median": 0.8887,
+      "ci_low": 0.5184,
+      "ci_high": 0.9973,
+      "rhat": 1.0008,
+      "ess": 1515
+    },
+    "phi_12": {
+      "mean": 0.1862,
+      "sd": 0.0559,
+      "median": 0.1797,
+      "ci_low": 0.0969,
+      "ci_high": 0.315,
+      "rhat": 1.0003,
+      "ess": 1336
+    },
+    "p_oct": {
+      "mean": 0.0426,
+      "sd": 0.0183,
+      "median": 0.0403,
+      "ci_low": 0.0144,
+      "ci_high": 0.0847,
+      "rhat": 1.0003,
+      "ess": 1426
+    },
+    "p_nov": {
+      "mean": 0.0434,
+      "sd": 0.0092,
+      "median": 0.0425,
+      "ci_low": 0.0278,
+      "ci_high": 0.0637,
+      "rhat": 1.0005,
+      "ess": 1330
+    },
+    "p_feb": {
+      "mean": 0.1084,
+      "sd": 0.0211,
+      "median": 0.1073,
+      "ci_low": 0.0708,
+      "ci_high": 0.1526,
+      "rhat": 1.0004,
+      "ess": 1413
+    },
+    "pd_oct": {
+      "mean": 0.1581,
+      "sd": 0.0629,
+      "median": 0.1518,
+      "ci_low": 0.0564,
+      "ci_high": 0.2981,
+      "rhat": 1.0003,
+      "ess": 1412
+    },
+    "pd_nov": {
+      "mean": 0.1981,
+      "sd": 0.038,
+      "median": 0.1952,
+      "ci_low": 0.1316,
+      "ci_high": 0.2804,
+      "rhat": 1.0005,
+      "ess": 1326
+    },
+    "pd_feb": {
+      "mean": 0.4333,
+      "sd": 0.0659,
+      "median": 0.4329,
+      "ci_low": 0.3071,
+      "ci_high": 0.5632,
+      "rhat": 1.0004,
+      "ess": 1400
+    },
+    "N_oct": {
+      "mean": 518.1197,
+      "sd": 281.607,
+      "median": 447.8208,
+      "ci_low": 228.0922,
+      "ci_high": 1206.2754,
+      "rhat": 1.0001,
+      "ess": 1343
+    },
+    "N_nov": {
+      "mean": 754.6028,
+      "sd": 149.6396,
+      "median": 737.5981,
+      "ci_low": 513.509,
+      "ci_high": 1094.3455,
+      "rhat": 1.0004,
+      "ess": 1320
+    },
+    "N_feb": {
+      "mean": 205.6996,
+      "sd": 33.2954,
+      "median": 200.9595,
+      "ci_low": 154.4879,
+      "ci_high": 283.2629,
+      "rhat": 1.0003,
+      "ess": 1382
+    }
+  },
+  "closure_test": {
+    "Oct": {
+      "z": 0.6,
+      "p_value": 0.547
+    },
+    "Nov": {
+      "z": -1.92,
+      "p_value": 0.055
+    },
+    "Feb": {
+      "z": -2.28,
+      "p_value": 0.023
+    }
+  },
+  "model_comparison": {
+    "waic_phi_t_p_t": 194.8,
+    "waic_phi_dot_p_t": 197.6,
+    "delta_waic": 2.8,
+    "phi_constant_median": 0.355,
+    "phi_constant_ci_low": 0.232,
+    "phi_constant_ci_high": 0.535,
+    "phi_constant_rhat": 1.002,
+    "phi_constant_ess": 290
+  },
+  "mle_rcapture": {
+    "phi_01": {
+      "estimate": 0.793,
+      "se": 0.236
+    },
+    "phi_12": {
+      "estimate": 0.165,
+      "se": 0.051
+    },
+    "p_oct": {
+      "estimate": 0.143,
+      "se": 0.065
+    },
+    "p_nov": {
+      "estimate": 0.2,
+      "se": 0.044
+    },
+    "p_feb": {
+      "estimate": 0.451,
+      "se": 0.067
+    },
+    "N_oct": {
+      "estimate": 474,
+      "se": 222
+    },
+    "N_nov": {
+      "estimate": 724,
+      "se": 166
+    },
+    "N_feb": {
+      "estimate": 193,
+      "se": 32
+    },
+    "superpopulation": {
+      "estimate": 895,
+      "se": 125
+    }
+  },
+  "prior_sensitivity": {
+    "phi_12_map_primary": 0.18,
+    "phi_12_map_flat": 0.171
+  }
+}
